@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<head><title></title></head>
+<body>
+<!DOCTYPE html>
+<html>
+  <head><title>SGPA System Unilag</title>
+    <style>
+        body {
+    background-color:#9;
+}
+#header {
+    
+    background-color:#3399cc;
+    color:white;
+}
+#name {
+    padding:12px 20px;
+    border:1px solid blue;
+    border-radius:10px;
+}
+#falc {
+    padding:12px 20px;
+    border:1px solid blue;
+    border-radius:10px;
+}
+#depart {
+    padding:12px 20px;
+    border:1px solid blue;
+    border-radius:10px;
+}
+#matric {
+    padding:12px 20px;
+    border:1px solid blue;
+    border-radius:10px;
+}
+
+#year {
+    padding:10px 10px;
+    border:1px solid blue;
+    border-radius:10px;
+}
+
+#button1 {
+    
+    padding:12px 20px;
+    border:2px solid blue;
+    background-color:blue;
+    color:white;
+   }
+   
+#button2 {
+    padding:10px 10px;
+    border:2px solid blue;
+    background-color:blue;
+    color:white;
+    
+    }
+    </style>
+  </head>  
+  
+    <body>
+    <center>
+      <div id="header">
+       <input type="button" id="button2" value="Crafted With Love By Femi Olayinka (Twitter: @femisonic"/>
+      <h1>Students SGPA System</h1>
+      <hr>
+      </div>
+      <div id="form">
+      <fieldset>
+      <legend>Enter your details</legend>
+      <form>
+   <b>Enter your full Name: <input type="text" name="name" placeholder="name here" id="name"/></b> <br /><br />
+   <b>Faculty: </b><select type="dropdown" id="falc">
+       <option name="science" value="Science">Science</option>
+        <option name="BusAdmin" value="Business Administration">Business Administration</option>
+       <option name="engineering" value="engineering">Engineering</option> 
+        <option name="Law" value="Law">Law</option>
+         <option name="education" value="education">Education</option>
+         <option name="EnvSci" value="Environmental science">Environmental Science</option>
+          <option name="Social Science" value="Social Science">Social Science</option>
+           <option name="pham" value="Pharmacy">Pharmacy</option>
+            <option name="med" value="CMUL">College OF Medicine</option>
+            <option name="arts" value="Arts">Arts</option>
+        </select> <br /><br />
+<b>Department: </b><input type="text" placeholder="Enter Department" id="depart"/><br /><br />
+<b>Matric No: </b><input type="number" placeholder="matric number" id="matric" /><br /><br />
+<b>Session: <b> 
+<select id="year">
+<option name="1year" value="sci1">2017/18</option>
+ <option name="2year" value="sci2">2016/17</option>
+  <option name="sci2" value="Sci3">2015/16</option>
+   <option name="sci3" value="Sci4">2014/15</option>
+    <option name="sci4" value="Sci5">2013/14</option>
+     <option name="sci5" value="Sci5">2012/13</option>
+      <option name="sci6" value="Sci6">2011/12</option>
+       <option name="sci7" value="Sci7">2010/11</option>
+        <option name="sci8" value="Sci8">2009/2010</option>
+</select>
+    </div>
+    <br />
+    <br />
+    
+    <div id="table">
+   <table border="1px" width="">
+       <tr>
+           <th>COURSE CODE</th>
+           <th>UNIT</th>
+           <th>SCORE(over 100)</th>
+           
+      </tr>
+       <tr>
+           <td><input type="text" id="acode" /></td>
+           <td><input type="number" id="m" /></td>
+           <td><input type="number" id="a" /></td>
+       </tr>
+        <tr>
+           <td><input type="text" id="bcode" /></td>
+           <td><input type="number" id="n" /></td>
+           <td><input type="number" id="b" /></td>
+       </tr>
+        <tr>
+           <td><input type="text" id="ccode" /></td>
+           <td><input type="number" id="o" /></td>
+           <td><input type="number" id="c" /></td>
+       </tr>
+         <tr>
+           <td><input type="text" id="dcode" /></td>
+           <td><input type="number" id="p" /></td>
+           <td><input type="number" id="d" /></td>
+       </tr>
+       
+     <tr>
+           <td><input type="text" id="ecode" /></td>
+           <td><input type="number" id="q" /></td>
+           <td><input type="number" id="e" /></td>
+       </tr>
+        <tr>
+           <td><input type="text" id="fcode" /></td>
+           <td><input type="number" id="r" /></td>
+           <td><input type="number" id="f" /></td>
+       </tr>
+        <tr>
+           <td><input type="text" id="gcode" /></td>
+           <td><input type="number" id="s" /></td>
+           <td><input type="number" id="g" /></td>
+       </tr>
+        <tr>
+           <td><input type="text" id="hcode" /></td>
+           <td><input type="number" id="t"" /></td>
+           <td><input type="number" id="h" /></td>
+       </tr>
+       
+       <tr>
+           <th>Total Units</th>
+           <th><input type="number" id="tot"</th>
+           <th></th>
+       </tr>
+       
+     </table>  <br /><br />   
+    <input type="submit" onclick="Cgpa()" id="button1" value="Submit details" />
+    
+    </fieldset>
+    
+    
+
+    
+    <br />
+    <br />
+  
+    </form>
+   
+    </div>
+        </center>
+        
+       </div>
+       <br>
+    <font size="15px">Your CGPA Is:  <div id="show"></div></font>
+      <script>
+      
+      
+      
+        function Cgpa() {
+            var a=document.getElementById("a").value;
+            var b=document.getElementById("b").value;
+            
+            var c=document.getElementById("c").value;
+            var d=document.getElementById("d").value;
+            var e=document.getElementById("e").value;
+            var f=document.getElementById("f").value;
+             var g=document.getElementById("g").value;
+            var h=document.getElementById("h").value;
+            var tot=document.getElementById("tot").value;
+            var acode=document.getElementById("acode").value;
+            var bcode=document.getElementById("bcode").value;
+            var ccode=document.getElementById("ccode").value;
+            var dcode=document.getElementById("dcode").value;
+            var ecode=document.getElementById("ecode").value;
+            var fcode=document.getElementById("fcode").value;    
+             var gcode=document.getElementById("gcode").value;
+            var hcode=document.getElementById("hcode").value;
+            var name=document.getElementById("name").value;
+           var matric=document.getElementById("matric").value;
+            var falc=document.getElementById("falc").value;
+            var depart=document.getElementById("depart").value;
+             var m=document.getElementById("m").value;
+              var n=document.getElementById("n").value;
+               var o=document.getElementById("o").value;
+               
+             var p=document.getElementById("p").value;
+              var q=document.getElementById("q").value;
+               var r=document.getElementById("r").value;
+                var s=document.getElementById("s").value;
+                 var t=document.getElementById("t").value;
+                 
+        if (0<= a && a < 39 )  {
+        var p1 = 1
+          }
+       else if (40<= a && a <= 49 )   {
+        var p1 = 2
+          }
+        
+        else if (50<= a && a <= 59 )   {
+        var p1 = 3 
+          }
+        else if (60<= a && a <= 69)   {
+        var p1 = 4 
+        }
+        else if (70<= a && a <= 100)   {
+        var p1 = 5 
+        }
+        
+        if (0<= b && b <= 39 )  {
+        var p2 = 1
+          }
+       else if (40<= b && b <= 49 )   {
+        var p2 = 2
+          }
+        
+        else if (50<= b && b <= 59 )   {
+        var p2 = 3
+          }
+        else if (60<= b && b <= 69)   {
+        var p2 = 4
+        }
+        else if (70<= b && b <= 100)   {
+        var p2 = 5
+        }
+        if (0<= c && c < 39 )  {
+        var p3 = 1
+          }
+       else if (40<= c && c <= 49 )   {
+        var p3 = 2
+          }
+        
+        else if (50<= c && c <= 59 )   {
+        var p3 = 3 
+          }
+        else if (60<= c && c <= 69)   {
+        var p3 = 4 
+        }
+        else if (70<= c && c <= 100)   {
+        var p3 = 5 
+        }
+            if (0<= d && d <= 39 )  {
+        var p4 = 1
+          }
+       else if (40<= d && d <= 49 )   {
+        var p4 = 2
+          }
+        
+        else if (50<= d && d <= 59 )   {
+        var p4 = 3 
+          }
+        else if (60<= d && d <= 69)   {
+        var p4 = 4 
+        }
+        else if (70<= d && d <= 100)   {
+        var p4 = 5 
+        }
+        
+        if (0<= e && e <= 39 )  {
+        var p5 = 1
+          }
+       else if (40<= e && e <= 49 )   {
+        var p5 = 2
+          }
+        
+        else if (50<= e && e <= 59 )   {
+        var p5 = 3 
+          }
+        else if (60<= e && e <= 69)   {
+        var p5 = 4 
+        }
+        else if (70<= e && e <= 100)   {
+        var p5 = 5 
+        }
+        
+          if (0<= f && f <= 39 )  {
+        var p6 = 1
+          }
+       else if (40<= f && f<= 49 )   {
+        var p6 = 2
+          }
+        
+        else if (50<= f && f <= 59 )   {
+        var p6 = 3 
+          }
+        else if (60<= f && f <= 69)   {
+        var p6 = 4 
+        }
+        else if (70<= f && f <= 100)   {
+        var p6 = 5 
+        }  
+        
+        if (0<= g && g <= 39 )  {
+        var p7 = 1
+          }
+       else if (40<= g && g <= 49 )   {
+        var p7 = 2
+          }
+        
+        else if (50<= g && g <= 59 )   {
+        var p7 = 3 
+          }
+        else if (60<= g && g <= 69)   {
+        var p7 = 4 
+        }
+        else if (70<= g && g <= 100)   {
+        var p7 = 5 
+        }
+        if (0<= h && h <= 39 )  {
+        var p8 = 1
+          }
+       else if (40<= h && h <= 49 )   {
+        var p8 = 2
+          }
+        
+        else if (50<= h && h <= 59 )   {
+        var p8 = 3 
+          }
+        else if (60<= h && h <= 69)   {
+        var p8 = 4 
+        }
+        else if (70<= h && h <= 100)   {
+        var p8 = 5 
+        }
+        
+        
+        
+         var cgpa = (((p1*m)+(p2*n)+(p3*o)+(p4*p)+(p5*q)+(p6*r)+(p7*s)+(p8*t))/tot).toFixed(2);
+     
+        document.getElementById("show").innerHTML =  (cgpa)/1;
+ 
+        
+     alert(
+     "Name: " +  name   +  "  \nDepartment: "  + depart     +  "   \nFaculty: "  +  falc  + "       \nMatric number: "  +  matric  +   "   \nCourses Offered: "  +  "\n" + acode +  "\n" +  bcode  + "\n" +  ccode  + "\n" +  dcode  + "\n" +   ecode  + "\n" + fcode + "\n" + gcode + "\n" + hcode  +
+     
+   "  \nYour CGPA  is:  " + cgpa);
+  
+  if (4.5<= cgpa && cgpa <= 5) {
+  
+  alert("Wow! FirstClass!");
+      }
+   else if ( 3.5 <= cgpa && cgpa <= 4.49) {
+   
+   alert("Second Class Upper!");
+   
+   
+   }
+   else if ( 2.5 <= cgpa && cgpa <= 3.49) {
+   
+   alert("Second Class Lower!");
+   
+     }
+   else if ( 1.5 <= cgpa && cgpa <= 2.49) {
+   
+   alert("Third Class!");
+   
+   
+    }
+          else if ( 1<= cgpa && cgpa <= 1.49) {
+   
+   alert("PASS!");
+   
+          }
+          else if ( 0 <= cgpa && cgpa <= 0.99) {
+   
+   alert("FAILED!");
+   
+          }
+}          
+      </script>
+        
+        
+    </body>
+    
+</html
+
+</body>
+</html>
